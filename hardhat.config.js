@@ -16,7 +16,7 @@ const ROPSTEN_PRIVATE_KEY = "YOUR ROPSTEN PRIVATE KEY";
  * @type import('hardhat/config').HardhatUserConfig
  */
 module.exports = {
-  solidity: "0.7.3",
+  solidity: "0.8.4",
     networks: {
     development: {
       url: "http://127.0.0.1:9545"
