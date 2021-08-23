@@ -14,7 +14,7 @@ describe("Token contract", function () {
   });
 });
 
-describe("Transactions", function () {
+describe("Token Transactions", function () {
   it("Should transfer tokens between accounts", async function () {
     const [owner, addr1, addr2] = await ethers.getSigners();
 
