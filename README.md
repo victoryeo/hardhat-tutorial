@@ -15,3 +15,5 @@ undefined
 > (await box.retrieve()).toString();
 '42'
 ```
+# test contract
+npx hardhat test
