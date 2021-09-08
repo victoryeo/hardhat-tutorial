@@ -7,7 +7,7 @@ describe("Token contract", function () {
 
     const Token = await ethers.getContractFactory("Token");
 
-    const hardhatToken = await Token.deploy();
+    const hardhatToken = await Token.deploy({args:["hello"]});
 
     const ownerBalance = await hardhatToken.balanceOf(owner.address);
     expect(await hardhatToken.totalSupply()).to.equal(ownerBalance);
@@ -20,7 +20,7 @@ describe("Token Transactions", function () {
 
     const Token = await ethers.getContractFactory("Token");
 
-    const hardhatToken = await Token.deploy();
+    const hardhatToken = await Token.deploy({args:["hello"]});
 
     // Transfer 50 tokens from owner to addr1
     await hardhatToken.transfer(addr1.address, 50);

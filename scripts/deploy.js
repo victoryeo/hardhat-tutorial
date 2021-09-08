@@ -8,7 +8,7 @@ async function main() {
 
   const Token = await ethers.getContractFactory("Token");
   console.log('Deploying Token...');
-  const token = await Token.deploy();
+  const token = await Token.deploy({args:["hello"]});
   console.log("Token address:", token.address);
 
   const Box = await ethers.getContractFactory('Box');

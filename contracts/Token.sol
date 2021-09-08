@@ -21,16 +21,19 @@ contract Token {
     // A mapping is a key/value map. Here we store each account balance.
     mapping(address => uint256) balances;
 
+    string private data;
+
     /**
      * Contract initialization.
      *
      * The `constructor` is executed only once when the contract is created.
      */
-    constructor() {
+    constructor(string memory arg1) {
         // The totalSupply is assigned to transaction sender, which is the account
         // that is deploying the contract.
         balances[msg.sender] = totalSupply;
         owner = msg.sender;
+        data = arg1;
     }
 
     /**
@@ -40,6 +43,7 @@ contract Token {
      * the contract.
      */
     function transfer(address to, uint256 amount) external {
+        console.log(type(uint).max);
         console.log("Sender balance is %s tokens", balances[msg.sender]);
         console.log("Trying to send %s tokens to %s", amount, to);
 
